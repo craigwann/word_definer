@@ -4,9 +4,9 @@ class Word
   attr_accessor :word
   attr_accessor :definition
 
-  def initialize(word, definition)
+  def initialize(word)
     @word = word
-    @definition = definition
+    @definition = []
     @id = @@list.length + 1
   end
 
@@ -23,8 +23,13 @@ class Word
     end
   end
 
+
   def save()
       @@list.push(self)
+  end
+
+  def save_def()
+      @definition.push(self)
   end
 
   def self.clear()
