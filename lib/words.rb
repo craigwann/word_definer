@@ -3,6 +3,7 @@ class Word
   attr_reader :id
   attr_accessor :word
   attr_accessor :definition
+  attr_accessor :def_array
 
   def initialize(word, definition)
     @word = word
