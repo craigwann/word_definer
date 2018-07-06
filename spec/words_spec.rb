@@ -65,5 +65,18 @@ describe("Item") do
           expect(item.def_array()).to(eq(["canine", "four legged mammal"]))
           end
         end
+      describe("#definition") do
+        it("returns definition array") do
+          Word.clear()
+          item = Word.new("dog", "canine")
+          item.save()
+          item.save_def()
+          item.definition = "four legged mammal"
+          item.save_def()
+          item.definition = "not a cat"
+          item.save_def()
+          expect(item.def_array()).to(eq(["canine", "four legged mammal", "not a cat"]))
+          end
+        end
 
 end

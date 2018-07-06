@@ -22,3 +22,9 @@ get ('/items/:id') do
   @item = Word.find(params[:id])
   erb(:output)
 end
+
+get('/addDefinition') do
+  @definition = params["definition_add"]
+  @item.save_def()
+  erb(:output)
+end

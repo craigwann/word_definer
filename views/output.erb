@@ -2,7 +2,18 @@
   <div class="well">
     <h1><%= @item.word %></h1>
 
-    <p>definition: <%= @item.definition[0].to_s %></p>
+    <h3>definition: <%= @item.definition %></h3>
+
+    <% @item.def_array.each do |definition| %>
+      <h4><%= definition %></h4>
+    <% end %>
 
   </div>
 </div>
+<form action="/addDefinition" method="get">
+  <div class="form-group">
+    <label for="definition">Add another definition</label>
+    <input id="d" name="definition" class="form-control" type="text">
+  </div>
+  <button type="submit" class="btn btn-primary">Add definition</button>
+</form>
