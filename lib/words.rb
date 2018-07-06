@@ -4,9 +4,9 @@ class Word
   attr_accessor :word
   attr_accessor :definition
 
-  def initialize(word)
+  def initialize(word, definition)
     @word = word
-    
+    @definition = definition
     @id = @@list.length + 1
   end
 

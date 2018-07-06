@@ -12,7 +12,7 @@ end
 post('/') do
   word = params["word"]
   definition = params["definition"]
-  item = Word.new(word)
+  item = Word.new(word, definition)
   item.save()
   @list = Word.all()
   erb(:input)
@@ -21,4 +21,8 @@ end
 get ('/items/:id') do
   @item = Word.find(params[:id])
   erb(:output)
+end
+
+get ('/back_input') do
+  erb(:input)
 end

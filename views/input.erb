@@ -4,18 +4,18 @@
   </div>
 
   <% @list.each do |item| %>
-    <h4><a href="/items/<%= item.id %>"><%= item.name %></a></h4>
+    <h4><a href="/items/<%= item.id %>"><%= item.word %></a></h4>
   <% end %>
 
   <div class="well">
         <h4>Add an word to the list:</h4>
     <form action="/" method="post">
       <div class="form-group">
-        <label for="name">word</label>
+        <label for="word">word</label>
         <input id="w" name="word" class="form-control" type="text">
       </div>
       <div class="form-group">
-        <label for="name">define</label>
+        <label for="definition">define</label>
         <input id="d" name="definition" class="form-control" type="text">
       </div>
       <button type="submit" class="btn btn-primary">Add Word</button>
