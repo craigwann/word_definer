@@ -22,7 +22,3 @@ get ('/items/:id') do
   @item = Word.find(params[:id])
   erb(:output)
 end
-
-get ('/back_input') do
-  erb(:input)
-end
