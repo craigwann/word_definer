@@ -3,7 +3,8 @@ require('words')
 
 describe("Item") do
   describe(".all") do
-    it("1-@@list is empty at first") do
+    it("1-@@list is empty/clear at first") do
+      Word.clear()
       expect(Word.all()).to(eq([]))
     end
   end
