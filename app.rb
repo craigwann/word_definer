@@ -24,8 +24,9 @@ get ('/items/:id') do
   erb(:output)
 end
 
-get('/addDefinition') do
-  @item = params.fetch("add_button")
+post('/items/:id') do
+  @item = Word.find(params[:id])
+  @item = Word.find(params.fetch("add_button"))
   definition = params.fetch("definition_add")
   @item.save_def(definition)
   erb(:output)

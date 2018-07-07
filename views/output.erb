@@ -10,10 +10,10 @@
 
   </div>
 </div>
-<form action="/addDefinition" method="get">
+<form action="/items/:id" method="post">
   <div class="form-group">
     <label for="definition">Add another definition</label>
     <input id="d2" name="definition_add" class="form-control" type="text">
-    <button name="add_button" value="<%= @item.word %>" type="submit" class="btn btn-primary">Add definition</button>
+    <button name="add_button" value="<%= @item.id %>" type="submit" class="btn btn-primary">Add definition</button>
   </div>
 </form>
