@@ -5,16 +5,17 @@ require('./lib/words')
 require('pry')
 
 get('/') do
-  @list = Word.all()
+  @list_word = Word.all()
   erb(:input)
 end
 
 post('/') do
   word = params["word"]
   definition = params["definition"]
-  item = Word.new(word, definition)
+  item = Word.new(:word => word)
+  item.def_array.push(definition)
   item.save()
-  @list = Word.all()
+  @list_word = Word.all()
   erb(:input)
 end
 
@@ -24,7 +25,8 @@ get ('/items/:id') do
 end
 
 get('/addDefinition') do
-  @definition = params["definition_add"]
-  @item.save_def()
+  @item = params.fetch("add_button")
+  definition = params.fetch("definition_add")
+  @item.save_def(definition)
   erb(:output)
 end
