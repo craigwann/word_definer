@@ -31,3 +31,8 @@ post('/items/:id') do
   @item.save_def(definition)
   erb(:output)
 end
+
+get('/back') do
+  @list_word = Word.all()
+  erb(:input)
+end

@@ -1,19 +1,57 @@
 <div class="container">
-  <div class="well">
+  <div class="jumbotron">
     <h1><%= @item.word %></h1>
+  </div>
 
-    <h3>definition: <%= @item.definition %></h3>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">definition(s):</h3>
+    </div>
+    <div class="panel-body">
+      <ol>
+      <% @item.def_array.each do |definition| %>
+        <li><%= definition %></li>
+      <% end %>
+      </ol>
 
-    <% @item.def_array.each do |definition| %>
-      <h4><%= definition %></h4>
-    <% end %>
+    </div>
+  </div>
 
+    <h3></h3>
+
+
+
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Add more definitions</h3>
+    </div>
+    <div class="panel-body">
+
+      <form action="/items/:id" method="post" class="form-horizontal">
+        <div class="form-group">
+          <label for="definition" class="col-sm-2 control-label">Add  definition:</label>
+          <div class="col-sm-10">
+            <input id="d2" name="definition_add" class="form-control" type="text">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="col-sm-offset-2 col-sm-10">
+            <button name="add_button" value="<%= @item.id %>" type="submit" class="btn btn-primary">Add definition</button>
+          </div>
+        </div>
+
+      </form>
+
+      <form action="/back" method="get">
+        <div class="form-group">
+          <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" name="return_button" class="btn btn-success">Word List</button>
+          </div>
+        </div>
+      </form>
+
+    </div>
   </div>
 </div>
-<form action="/items/:id" method="post">
-  <div class="form-group">
-    <label for="definition">Add another definition</label>
-    <input id="d2" name="definition_add" class="form-control" type="text">
-    <button name="add_button" value="<%= @item.id %>" type="submit" class="btn btn-primary">Add definition</button>
-  </div>
-</form>

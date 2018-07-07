@@ -62,10 +62,3 @@ describe(".find") do
         expect(item.def_array()).to(eq(["canine", "four legged mammal", "not a cat"]))
         end
       end
-
-
-
-      <form action="/word/:word" method="post">
-        <input type="text" name="add_definition">
-        <button type="submit" name="add_definition_btn" value="<%=@current_word.word%>" class="btn btn-primary">Add Definition</button>
-      </form>
