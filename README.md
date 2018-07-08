@@ -13,7 +13,8 @@ A web application where a word list can be created and definitions added to the 
 1. Using Terminal navigate to the root directory
 1. enter "ruby app.rb"
 1. open web browser and enter URL http://localhost:4567/
-1. OR open https://whispering-retreat-34079.herokuapp.com in browser
+
+1. **OR** open https://whispering-retreat-34079.herokuapp.com in browser
 
 ## Specs/Steps
 | Behavior	| INPUT	| OUTPUT |
