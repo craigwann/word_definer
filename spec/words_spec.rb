@@ -17,7 +17,7 @@ describe("Item") do
   describe("#save") do
     it("3-passes definition to new Word instance ") do
       item = Word.new({:word => 'hello'})
-      item.def_array.push("basic greeting")
+      item.save_def("basic greeting")
       expect(item.def_array[0]).to(eq("basic greeting"))
     end
   end
