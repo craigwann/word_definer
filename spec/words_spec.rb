@@ -33,5 +33,15 @@ describe("Item") do
         expect(Word.find(2)).to(eq(item2))
       end
     end
+    describe("#definition") do
+      it("5-returns definition array") do
+        Word.clear()
+        item = Word.new({:word => 'dog'})
+        item.save_def("canine")
+        item.save_def("four legged mammal")
+        item.save()
+        expect(item.def_array()).to(eq(["canine", "four legged mammal"]))
+        end
+      end
 
 end
