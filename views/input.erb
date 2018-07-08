@@ -1,14 +1,21 @@
 <div class="container">
   <div class="jumbotron">
-    <h2>Word Definer</h2>
+    <h1>Word Definer</h1>
   </div>
 
-  <% @list_word.each do |item| %>
-    <h4><a href="/items/<%= item.id %>"><%= item.word %></a></h4>
-  <% end %>
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+      <h3 class="panel-title">Word List</h3>
+    </div>
+    <div class="panel-body">
+      <% @list_word.each do |item| %>
+        <h4><a href="/items/<%= item.id %>"><%= item.word %></a></h4>
+      <% end %>
+    </div>
+  </div>
 
   <div class="well">
-        <h4>Add an word to the list:</h4>
+        <h3>Add an word to the list:</h3>
     <form action="/" method="post">
       <div class="form-group">
         <label for="word">word</label>

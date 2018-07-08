@@ -17,12 +17,7 @@
     </div>
   </div>
 
-    <h3></h3>
-
-
-
-
-  <div class="panel panel-default">
+  <div class="panel panel-success">
     <div class="panel-heading">
       <h3 class="panel-title">Add more definitions</h3>
     </div>
@@ -37,17 +32,16 @@
         </div>
 
         <div class="form-group">
-          <div class="col-sm-offset-2 col-sm-10">
-            <button name="add_button" value="<%= @item.id %>" type="submit" class="btn btn-primary">Add definition</button>
+          <div class="col-sm-offset-2 col-sm-4">
+            <button name="add_button" value="<%= @item.id %>" type="submit" class="btn btn-success btn-lg btn-block">Add definition</button>
           </div>
         </div>
-
       </form>
 
       <form action="/back" method="get">
         <div class="form-group">
-          <div class="col-sm-offset-2 col-sm-10">
-            <button type="submit" name="return_button" class="btn btn-success">Word List</button>
+          <div class="col-sm-offset-2 col-sm-4">
+            <button type="submit" name="return_button" class="btn btn-primary btn-lg btn-block">Return to Word List</button>
           </div>
         </div>
       </form>

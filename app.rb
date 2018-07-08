@@ -13,7 +13,7 @@ post('/') do
   word = params["word"]
   definition = params["definition"]
   item = Word.new(:word => word)
-  item.def_array.push(definition)
+  item.save_def(definition)
   item.save()
   @list_word = Word.all()
   erb(:input)

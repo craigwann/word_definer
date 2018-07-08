@@ -32,7 +32,9 @@ class Word
   end
 
   def save_def(definition)
-      @def_array.push(definition)
+     if definition.to_s.length > 0
+       @def_array.push(definition)
+     end
   end
 
   def self.clear()
