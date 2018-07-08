@@ -23,3 +23,6 @@
         expect(item.def_array()).to(eq(["canine", "four legged mammal"]))
         end
       end
+
+
+item.def_array.push(definition)
