@@ -11,14 +11,6 @@
       end
     end
 
-    describe("#definition") do
-      it("6-returns definition array") do
-        Word.clear()
-        item = Word.new("dog", ["canine", "four legged mammal"])
-        item.save()
-        expect(item.definition()).to(eq(["canine", "four legged mammal"]))
-        end
-      end
 
     describe("#definition") do
       it("7-returns definition array") do
